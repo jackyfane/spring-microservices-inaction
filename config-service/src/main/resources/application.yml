@@ -1,0 +1,15 @@
+server:
+  port: 8888
+
+spring:
+  devtools:
+    add-properties: false
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: file:///Users/yaomalang/Repositories/Exercises/spring-microservices-inaction/config-service/src/main/resources/config/licensingservice
+  application:
+    name: config-service
