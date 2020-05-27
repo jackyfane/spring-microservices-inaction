@@ -2,10 +2,16 @@ package com.yaomalang.eagleeye.licenses.models;
 
 import lombok.Data;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 @Data
+@Entity(name = "licenses")
 public class License {
+
+    @Id
     private String licenseId;
-    private String productName;
+    private String prodName;
     private String licenseType;
     private String organizationId;
 
@@ -14,8 +20,8 @@ public class License {
         return this;
     }
 
-    public License withProductName(String productName) {
-        this.productName = productName;
+    public License withProductName(String prodName) {
+        this.prodName = prodName;
         return this;
     }
 
